@@ -330,12 +330,11 @@ function Index() {
                 Terraplenagem e Infraestrutura
               </p>
               <h1 className="reveal text-3xl font-extrabold leading-tight text-secondary-foreground sm:text-5xl">
-                Há mais de 14 anos transformando terrenos em{" "}
-                <span className="text-primary">grandes obras.</span>
+                {" "}
+                <span className="text-primary"></span>
               </h1>
               <p className="reveal mt-5 max-w-2xl text-base text-secondary-foreground/85 sm:text-lg">
-                A ESCAVTERRA oferece soluções completas em terraplenagem, pavimentação e
-                infraestrutura para obras públicas e particulares.
+
               </p>
               <div className="reveal mt-8 flex flex-wrap gap-3">
                 <a
