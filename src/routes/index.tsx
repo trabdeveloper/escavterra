@@ -72,25 +72,47 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "ESCAVTERRA — Terraplenagem e Infraestrutura em Jundiaí/SP" },
+      { title: "ESCAVTERRA | Terraplenagem, Pavimentação e Drenagem em Jundiaí/SP" },
       {
         name: "description",
         content:
-          "Há mais de 14 anos a ESCAVTERRA executa terraplenagem, pavimentação asfáltica, guias, sarjetas e redes de água e esgoto em Jundiaí e região.",
+          "Terraplenagem, pavimentação, asfalto, drenagem, guias, sarjetas e redes de água e esgoto em Jundiaí/SP e região. Solicite orçamento com a ESCAVTERRA.",
       },
       {
         name: "keywords",
         content:
-          "terraplenagem Jundiaí, pavimentação asfáltica, guia extruzada, guias e sarjetas, água e esgoto, infraestrutura, escavação",
+          "terraplenagem Jundiaí, pavimentação Jundiaí, asfalto Jundiaí, drenagem Jundiaí, guia extruzada, guias e sarjetas, água e esgoto, infraestrutura, escavação, ESCAVTERRA",
       },
-      { property: "og:title", content: "ESCAVTERRA — Terraplenagem e Infraestrutura" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
+      { name: "author", content: "ESCAVTERRA" },
+      { name: "geo.region", content: "BR-SP" },
+      { name: "geo.placename", content: "Jundiaí" },
+      { name: "theme-color", content: "#D4A017" },
+      {
+        property: "og:title",
+        content: "ESCAVTERRA | Terraplenagem, Pavimentação e Drenagem em Jundiaí/SP",
+      },
       {
         property: "og:description",
         content:
-          "Soluções completas em terraplenagem, pavimentação e infraestrutura para obras públicas e particulares em Jundiaí/SP.",
+          "Soluções completas em terraplenagem, pavimentação, asfalto, drenagem e infraestrutura para obras públicas e particulares em Jundiaí/SP e região.",
       },
+      { property: "og:site_name", content: "ESCAVTERRA" },
+      { property: "og:locale", content: "pt_BR" },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
+      { property: "og:image", content: "/images/logo.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      {
+        name: "twitter:title",
+        content: "ESCAVTERRA | Terraplenagem, Pavimentação e Drenagem em Jundiaí/SP",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Terraplenagem, pavimentação, asfalto, drenagem e infraestrutura em Jundiaí/SP e região.",
+      },
+      { name: "twitter:image", content: "/images/logo.png" },
     ],
     links: [{ rel: "canonical", href: "/" }],
     scripts: [
@@ -100,14 +122,57 @@ export const Route = createFileRoute("/")({
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
           name: "ESCAVTERRA",
-          description: "Terraplenagem, pavimentação e infraestrutura",
+          legalName: "ESCAVTERRA",
+          description:
+            "Terraplenagem, pavimentação, asfalto, drenagem, guias, sarjetas e infraestrutura em Jundiaí/SP e região.",
+          telephone: "+5511998044263",
+          taxID: "53.473.235/0001-67",
+          priceRange: "$$",
+          url: "/",
+          logo: "/images/logo.png",
+          image: "/images/logo.png",
           address: {
             "@type": "PostalAddress",
             addressLocality: "Jundiaí",
             addressRegion: "SP",
             addressCountry: "BR",
           },
-          areaServed: "Jundiaí e região",
+          geo: {
+            "@type": "GeoCoordinates",
+            latitude: -23.1857,
+            longitude: -46.8978,
+          },
+          areaServed: [
+            {
+              "@type": "City",
+              name: "Jundiaí",
+            },
+            {
+              "@type": "AdministrativeArea",
+              name: "São Paulo",
+            },
+          ],
+          sameAs: [
+            "https://www.facebook.com/Escavterra",
+            "https://www.instagram.com/escav_terra/",
+          ],
+          hasOfferCatalog: {
+            "@type": "OfferCatalog",
+            name: "Serviços de terraplenagem e infraestrutura",
+            itemListElement: SERVICOS.map((servico) => ({
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: servico.nome,
+                description: servico.desc,
+                areaServed: "Jundiaí e região",
+                provider: {
+                  "@type": "LocalBusiness",
+                  name: "ESCAVTERRA",
+                },
+              },
+            })),
+          },
         }),
       },
     ],
