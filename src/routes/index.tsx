@@ -164,7 +164,7 @@ export const Route = createFileRoute("/")({
           ],
           sameAs: [
             "https://www.facebook.com/Escavterra",
-            "https://www.instagram.com/escav_terra/",
+            "https://www.instagram.com/escavterra123/",
           ],
           hasOfferCatalog: {
             "@type": "OfferCatalog",
