@@ -53,6 +53,11 @@ const SERVICOS = [
     desc: "Assentamento de guias e sarjetas com nivelamento preciso e drenagem eficiente.",
   },
   {
+    slug: "servico5",
+    nome: "Locação de Máquinas",
+    desc: "Locação de máquinas para terraplenagem, escavação e apoio em obras com equipamentos adequados para cada necessidade.",
+  },
+  {
     slug: "servico6",
     nome: "Drenagem",
     desc: "Soluções de drenagem para controle de águas pluviais, escoamento e proteção da infraestrutura da obra.",
@@ -61,6 +66,11 @@ const SERVICOS = [
     slug: "servico7",
     nome: "Escada Hidráulica",
     desc: "Construção de escadas hidráulicas para dissipação de energia e controle de erosão.",
+  },
+  {
+    slug: "servico8",
+    nome: "Entrega de Materiais",
+    desc: "Entrega de materiais para obras, com transporte ágil e atendimento conforme a demanda do projeto.",
   },
 ];
 
